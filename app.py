@@ -102,6 +102,11 @@ with st.sidebar:
     st.markdown("""
     This interface retrieves information using RAG (Retrieval-Augmented Generation) 
     over the UKGC LCCP documentation.
+
+    st.sidebar.markdown("---") # Adds a visual divider line
+    st.sidebar.link_button(
+    "Go to Data Source", 
+    "https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/print")
     
     **Features:**
     - Source Grounding
@@ -111,4 +116,5 @@ with st.sidebar:
     st.divider()
     if st.button("Clear Chat History"):
         st.session_state.messages = []
+
         st.rerun()
